@@ -7,6 +7,8 @@
 
 **WokTalk** is a next-generation, AI-driven multimodal assistant that transforms passive youtube cooking videos into interactive, localized language-learning experiences. By leveraging state-of-the-art vision models and real-time streaming architectures, WokTalk bridges the gap between culinary entertainment and functional fluency.
 
+[**Launch App**](https://fxxii.github.io/woktalk) 
+
 ---
 
 ## 💎 Investment Thesis
@@ -102,6 +104,24 @@ By leveraging Gemini's internal sampling and focusing on the semantic delta betw
     npm run build
     npm start
     ```
+---
+
+## � Deployment
+
+The frontend is configured for automatic deployment to **GitHub Pages**.
+
+### 1. Push to GitHub
+When you push to the `main` branch, a GitHub Action will automatically build and deploy the frontend.
+
+### 2. Enable GitHub Pages
+1. Go to your repository **Settings** > **Pages**.
+2. Under "Build and deployment", select **Source** as **GitHub Actions**.
+3. (The workflow will handle the rest).
+
+### 3. Verification
+- **Live Site**: [https://fxxii.github.io/woktalk/](https://fxxii.github.io/woktalk/)
+- **Local Dev**: Run `npm run dev` in `frontend/`. It will continue to use your local backend at `http://localhost:8000`.
+
 
 ---
 
@@ -111,7 +131,7 @@ We are looking for collaborators and visionaries. Check our [CONTRIBUTING.md](CO
 
 ---
 
-## 📜 License
+## �📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 

@@ -42,7 +42,12 @@ export default function Home() {
 
     try {
       // Start processing
-      const response = await fetch('/api/process-video', {
+      // Use direct URL for local dev, or configure via env for production
+      // Since GitHub Pages is static, we can't hide API keys/URLs easily anyway
+      // For now, hardcode localhost for dev ease or use window.location hack if needed
+      const API_BASE = 'http://localhost:8000'; 
+      
+      const response = await fetch(`${API_BASE}/api/process-video`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
@@ -67,7 +72,14 @@ export default function Home() {
       const startStatusStream = (jobId: string) => {
         // Try direct backend port (bypass proxy which might buffer SSE)
         const host = window.location.hostname;
-        const sseUrl = `http://${host}:8000/api/stream-status/${jobId}`;
+        // If on localhost/127.0.0.1, use port 8000. 
+        // If on GitHub Pages, this won't work without a public backend, but that's expected.
+        const baseUrl = (host === 'localhost' || host === '127.0.0.1') 
+          ? `http://${host}:8000` 
+          : 'http://localhost:8000'; // Fallback to localhost if deployed but running locally?? 
+          // actually for now let's just assume localhost for functionality
+        
+        const sseUrl = `${baseUrl}/api/stream-status/${jobId}`;
         // console.log('Connecting to SSE:', sseUrl);
         
         const eventSource = new EventSource(sseUrl);

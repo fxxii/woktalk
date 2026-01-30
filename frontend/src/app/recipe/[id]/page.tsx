@@ -46,7 +46,8 @@ export default function RecipePage() {
         }
 
         // Try to fetch from API for other recipes
-        const response = await fetch(`/api/recipe/${videoId}`);
+        const API_BASE = 'http://localhost:8000';
+        const response = await fetch(`${API_BASE}/api/recipe/${videoId}`);
         
         if (!response.ok) {
           throw new Error('Recipe not found');
