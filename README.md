@@ -7,7 +7,7 @@
 
 **WokTalk** is a next-generation, AI-driven multimodal assistant that transforms passive youtube cooking videos into interactive, localized language-learning experiences. By leveraging state-of-the-art vision models and real-time streaming architectures, WokTalk bridges the gap between culinary entertainment and functional fluency.
 
-[**Launch App**](https://fxxii.github.io/woktalk) 
+[**Launch Demo**](https://fxxii.github.io/woktalk) 
 
 ---
 

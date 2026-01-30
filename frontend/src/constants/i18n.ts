@@ -78,7 +78,8 @@ export const MESSAGES = {
     saved: 'saved',
     easy: 'Easy',
     medium: 'Medium',
-    hard: 'Hard'
+    hard: 'Hard',
+    noRecipe: 'No recipe loaded.'
   },
   hk: {
     next: '下一步',
@@ -117,6 +118,7 @@ export const MESSAGES = {
     saved: '節省',
     easy: '簡單',
     medium: '中等',
-    hard: '困難'
+    hard: '困難',
+    noRecipe: '未載入食譜。'
   }
 };
