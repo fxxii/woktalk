@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================
+   WokTalk Global Styles
+   Grease-Mode: Kitchen-friendly UI
+   ======================================== */
+
+:root {
+  /* Color tokens */
+  --wok-flame: #FF6B35;
+  --wok-coal: #1A1A2E;
+  --wok-steam: #F5F5F5;
+  --wok-ginger: #FFB347;
+  --wok-soy: #4A3728;
+  --wok-jade: #00A86B;
+  --wok-chili: #DC143C;
+  
+  /* Gradients */
+  --gradient-flame: linear-gradient(135deg, #FF6B35 0%, #FFB347 100%);
+  --gradient-coal: linear-gradient(180deg, #1A1A2E 0%, #2D2D44 100%);
+  --gradient-steam: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+}
+
+/* Dark mode by default for kitchen (reduces glare) */
+html {
+  color-scheme: dark;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--wok-coal);
+  color: var(--wok-steam);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Chinese text styling */
+.font-chinese {
+  font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+}
+
+/* ========================================
+   Grease-Mode Components
+   Large tap targets, readable text
+   ======================================== */
+
+@layer components {
+  /* Primary action button - large for greasy fingers */
+  .btn-primary {
+    @apply px-8 py-4 min-h-tap rounded-2xl font-semibold text-lg
+           bg-gradient-to-r from-wok-flame to-wok-ginger
+           text-white shadow-lg
+           transition-all duration-200 ease-out
+           hover:scale-105 hover:shadow-xl
+           active:scale-95
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+  
+  /* Secondary button */
+  .btn-secondary {
+    @apply px-6 py-3 min-h-tap rounded-xl font-medium text-base
+           bg-wok-soy/30 text-wok-steam border border-wok-steam/20
+           transition-all duration-200
+           hover:bg-wok-soy/50 hover:border-wok-steam/40
+           active:scale-95;
+  }
+  
+  /* Ghost button for navigation */
+  .btn-ghost {
+    @apply p-4 min-w-tap min-h-tap rounded-xl
+           text-wok-steam/70 
+           transition-all duration-200
+           hover:bg-wok-steam/10 hover:text-wok-steam
+           active:scale-95;
+  }
+  
+  /* Input field - large and readable */
+  .input-grease {
+    @apply w-full px-6 py-4 min-h-tap rounded-xl
+           bg-wok-coal border-2 border-wok-steam/20
+           text-xl text-wok-steam placeholder:text-wok-steam/40
+           focus:outline-none focus:border-wok-flame focus:ring-2 focus:ring-wok-flame/20
+           transition-all duration-200;
+  }
+  
+  /* Card component */
+  .card {
+    @apply p-6 rounded-2xl bg-wok-soy/20 border border-wok-steam/10
+           backdrop-blur-sm;
+  }
+  
+  /* Step indicator badge */
+  .step-badge {
+    @apply inline-flex items-center justify-center
+           w-12 h-12 rounded-full
+           bg-wok-flame text-white font-bold text-xl;
+  }
+  
+  /* Confidence badges */
+  .badge-confirmed {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full
+           bg-wok-jade/20 text-wok-jade text-sm font-medium;
+  }
+  
+  .badge-ambiguous {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full
+           bg-wok-ginger/20 text-wok-ginger text-sm font-medium;
+  }
+  
+  .badge-warning {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full
+           bg-wok-chili/20 text-wok-chili text-sm font-medium;
+  }
+  
+  /* Voice control button - extra large */
+  .voice-button {
+    @apply w-24 h-24 rounded-full
+           bg-gradient-to-r from-wok-flame to-wok-ginger
+           text-white shadow-2xl
+           flex items-center justify-center
+           transition-all duration-200
+           hover:scale-110 hover:shadow-wok-flame/50
+           active:scale-95;
+  }
+  
+  .voice-button.listening {
+    @apply animate-pulse ring-4 ring-wok-flame/50;
+  }
+  
+  /* Cantonese text - extra large for kitchen */
+  .text-cantonese {
+    @apply font-chinese text-grease-2xl leading-relaxed tracking-wide;
+  }
+  
+  /* Timer display */
+  .timer-display {
+    @apply font-mono text-grease-3xl font-bold
+           text-wok-flame tabular-nums;
+  }
+  
+  /* Progress bar */
+  .progress-bar {
+    @apply h-3 rounded-full bg-wok-soy/30 overflow-hidden;
+  }
+  
+  .progress-bar-fill {
+    @apply h-full rounded-full bg-gradient-to-r from-wok-flame to-wok-ginger
+           transition-all duration-500 ease-out;
+  }
+  
+  /* Flashcard */
+  .flashcard {
+    @apply relative w-full aspect-[4/3] rounded-2xl
+           bg-wok-coal border-2 border-wok-steam/20
+           flex flex-col items-center justify-center
+           cursor-pointer transition-all duration-300
+           hover:border-wok-flame/50 hover:shadow-lg hover:shadow-wok-flame/20;
+  }
+  
+  .flashcard.flipped {
+    @apply border-wok-jade;
+  }
+}
+
+/* ========================================
+   YouTube Player Styles
+   ======================================== */
+
+.youtube-container {
+  @apply relative w-full aspect-video rounded-xl overflow-hidden
+         bg-wok-coal border border-wok-steam/10;
+}
+
+.youtube-container iframe {
+  @apply absolute inset-0 w-full h-full;
+}
+
+.youtube-offline {
+  @apply absolute inset-0 flex flex-col items-center justify-center
+         bg-wok-soy/30 text-wok-steam/60;
+}
+
+/* ========================================
+   Animations
+   ======================================== */
+
+@keyframes wok-fire {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-wok-fire {
+  background-size: 200% 200%;
+  animation: wok-fire 3s ease infinite;
+}
+
+/* Steam effect */
+.steam-effect::before {
+  content: '';
+  @apply absolute -top-4 left-1/2 -translate-x-1/2
+         w-16 h-16 rounded-full
+         bg-white/5 blur-xl
+         animate-steam;
+}
+
+/* Pulse ring for active elements */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.pulse-ring::after {
+  content: '';
+  @apply absolute inset-0 rounded-full
+         border-2 border-wok-flame;
+  animation: pulse-ring 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ========================================
+   Mobile Responsive Adjustments
+   ======================================== */
+
+@media (max-width: 640px) {
+  /* Even larger text on mobile for kitchen use */
+  .text-cantonese {
+    @apply text-grease-xl;
+  }
+  
+  /* Full-width buttons on mobile */
+  .btn-primary,
+  .btn-secondary {
+    @apply w-full;
+  }
+}
+
+/* ========================================
+   Print styles (for recipe printing)
+   ======================================== */
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}

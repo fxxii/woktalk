@@ -1,0 +1,27 @@
+# Core dependencies
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+python-dotenv>=1.0.0
+pydantic>=2.5.3
+python-multipart>=0.0.6
+aiofiles>=23.2.1
+
+# Google AI SDKs
+google-genai>=1.0.0
+google-generativeai>=0.8.0
+
+# Video processing
+yt-dlp
+youtube-transcript-api
+
+# Caching (Production)
+upstash-redis>=0.15.0
+
+# Rate limiting
+slowapi>=0.1.9
+
+# Structured logging
+structlog>=24.1.0
+
+# Error tracking (Optional)
+sentry-sdk[fastapi]>=1.40.0

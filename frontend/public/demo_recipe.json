@@ -1,0 +1,249 @@
+{
+  "youtube_id": "GNGGWBWkRbE",
+  "processing_status": "success",
+  "error_message": null,
+  "recipe_meta": {
+    "title_en": "Gordon Ramsay's Scrambled and Fried Eggs",
+    "title_hk": "地獄廚神炒蛋同煎蛋",
+    "difficulty": "Easy",
+    "total_time_minutes": 10,
+    "servings": 2
+  },
+  "ingredients": [
+    {
+      "name_en": "Eggs",
+      "name_hk": "雞蛋",
+      "quantity": "6",
+      "optional": false,
+      "category": "Meat"
+    },
+    {
+      "name_en": "Butter",
+      "name_hk": "牛油",
+      "quantity": "4 knobs",
+      "optional": false,
+      "category": "Dairy"
+    },
+    {
+      "name_en": "Oil",
+      "name_hk": "油",
+      "quantity": "A touch",
+      "optional": false,
+      "category": "Pantry"
+    },
+    {
+      "name_en": "Salt",
+      "name_hk": "鹽",
+      "quantity": "To taste",
+      "optional": false,
+      "category": "Spices"
+    },
+    {
+      "name_en": "Pepper",
+      "name_hk": "胡椒粉",
+      "quantity": "To taste",
+      "optional": false,
+      "category": "Spices"
+    },
+    {
+      "name_en": "Chili flakes",
+      "name_hk": "辣椒碎",
+      "quantity": "Optional",
+      "optional": true,
+      "category": "Spices"
+    },
+    {
+      "name_en": "Creme fraiche",
+      "name_hk": "酸忌廉",
+      "quantity": "1 tablespoon",
+      "optional": false,
+      "category": "Dairy"
+    },
+    {
+      "name_en": "Chives",
+      "name_hk": "蔥花/細香蔥",
+      "quantity": "A bunch",
+      "optional": false,
+      "category": "Produce"
+    }
+  ],
+  "prep_tasks": [
+    {
+      "task_en": "Chop the chives finely",
+      "task_hk": "將細香蔥切碎",
+      "video_timestamp": "04:52",
+      "is_time_sensitive": false
+    },
+    {
+      "task_en": "Set out the eggs and butter",
+      "task_hk": "準備定雞蛋同牛油",
+      "video_timestamp": "00:00",
+      "is_time_sensitive": false
+    }
+  ],
+
+  "steps": [
+    {
+      "step_id": 1,
+      "timestamp_start": "00:15",
+      "timestamp_end": "00:30",
+      "instruction_en": "Gently heat the pan with a touch of oil.",
+      "instruction_hk": "細火熱下個鑊，落少少油啦！",
+      "visual_verification": {
+        "status": "confirmed",
+        "confidence": 0.95,
+        "details": "Chef adds a drop of oil to a small pan.",
+        "fallback_note": null
+      },
+      "timer_config": {
+        "has_timer": false,
+        "duration_seconds": null,
+        "visual_cue": "Wait until the oil moves easily"
+      }
+    },
+    {
+      "step_id": 2,
+      "timestamp_start": "00:31",
+      "timestamp_end": "00:45",
+      "instruction_en": "Add a knob of butter and season it with salt and pepper.",
+      "instruction_hk": "落嚿牛油，落鹽同胡椒粉調味。",
+      "visual_verification": {
+        "status": "confirmed",
+        "confidence": 0.98,
+        "details": "Butter melting in pan, seasoning added.",
+        "fallback_note": null
+      },
+      "timer_config": {
+        "has_timer": false,
+        "duration_seconds": null,
+        "visual_cue": "Butter should be foaming"
+      }
+    },
+    {
+      "step_id": 3,
+      "timestamp_start": "00:50",
+      "timestamp_end": "01:10",
+      "instruction_en": "Crack the egg and fry gently, shaking the pan.",
+      "instruction_hk": "打蛋落鑊，細火慢慢煎，搖下佢。",
+      "visual_verification": {
+        "status": "confirmed",
+        "confidence": 0.99,
+        "details": "Egg cracked into pan, pan being shaken.",
+        "fallback_note": null
+      },
+      "timer_config": {
+        "has_timer": false,
+        "duration_seconds": null,
+        "visual_cue": "Whites start to set and blister"
+      }
+    },
+    {
+      "step_id": 4,
+      "timestamp_start": "01:30",
+      "timestamp_end": "01:50",
+      "instruction_en": "Baste the egg white with the hot butter using a spoon.",
+      "instruction_hk": "用匙羹將熱牛油淋上蛋白度。",
+      "visual_verification": {
+        "status": "confirmed",
+        "confidence": 0.95,
+        "details": "Chef uses a spoon to pour butter over the whites.",
+        "fallback_note": null
+      },
+      "timer_config": {
+        "has_timer": false,
+        "duration_seconds": null,
+        "visual_cue": "Whites are fully opaque"
+      }
+    },
+    {
+      "step_id": 5,
+      "timestamp_start": "02:45",
+      "timestamp_end": "03:15",
+      "instruction_en": "For scrambled eggs, crack eggs into a cold pot.",
+      "instruction_hk": "炒蛋要用凍鑊，打蛋入去。",
+      "visual_verification": {
+        "status": "confirmed",
+        "confidence": 1.0,
+        "details": "Six eggs cracked into a cold saucepan.",
+        "fallback_note": null
+      },
+      "timer_config": {
+        "has_timer": false,
+        "duration_seconds": null,
+        "visual_cue": "Eggs remain unwhisked at this stage"
+      }
+    },
+    {
+      "step_id": 6,
+      "timestamp_start": "03:16",
+      "timestamp_end": "03:45",
+      "instruction_en": "Add butter and start stirring over heat.",
+      "instruction_hk": "落牛油，開火，不停咁攪佢。",
+      "visual_verification": {
+        "status": "confirmed",
+        "confidence": 0.95,
+        "details": "Adding butter and stirring with a spatula.",
+        "fallback_note": null
+      },
+      "timer_config": {
+        "has_timer": false,
+        "duration_seconds": null,
+        "visual_cue": "Butter starts to incorporate into the eggs"
+      }
+    },
+    {
+      "step_id": 7,
+      "timestamp_start": "03:50",
+      "timestamp_end": "04:15",
+      "instruction_en": "Go on and off the heat every 30-60 seconds while stirring.",
+      "instruction_hk": "離火回火咁煮，唔好俾佢過火。",
+      "visual_verification": {
+        "status": "confirmed",
+        "confidence": 0.9,
+        "details": "Chef moves the pot on and off the burner repeatedly.",
+        "fallback_note": null
+      },
+      "timer_config": {
+        "has_timer": true,
+        "duration_seconds": 60,
+        "visual_cue": "Eggs start to thicken and form curds"
+      }
+    },
+    {
+      "step_id": 8,
+      "timestamp_start": "04:20",
+      "timestamp_end": "04:40",
+      "instruction_en": "Stir in creme fraiche and season with salt and pepper.",
+      "instruction_hk": "落酸忌廉，落鹽同胡椒粉調味。",
+      "visual_verification": {
+        "status": "confirmed",
+        "confidence": 0.95,
+        "details": "Adding white cream and seasoning.",
+        "fallback_note": "Taste to verify salt levels"
+      },
+      "timer_config": {
+        "has_timer": false,
+        "duration_seconds": null,
+        "visual_cue": "The mixture looks creamy and shiny"
+      }
+    },
+    {
+      "step_id": 9,
+      "timestamp_start": "04:55",
+      "timestamp_end": "05:10",
+      "instruction_en": "Fold in chopped chives and serve on toast.",
+      "instruction_hk": "落蔥花攪勻，倒上塊多士度啦！",
+      "visual_verification": {
+        "status": "confirmed",
+        "confidence": 0.98,
+        "details": "Chives added and eggs plated on toast.",
+        "fallback_note": null
+      },
+      "timer_config": {
+        "has_timer": false,
+        "duration_seconds": null,
+        "visual_cue": "Chives are evenly distributed"
+      }
+    }
+  ]
+}
